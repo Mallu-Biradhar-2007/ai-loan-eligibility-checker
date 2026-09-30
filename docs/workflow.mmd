@@ -1,0 +1,20 @@
+flowchart LR
+  U[User] --> F[Financial form]
+  F --> V[Client validation]
+  V --> R[Rule-based logic]
+  R --> O[Eligibility / score / EMI result]
+  O --> C{AI context requested?}
+  C -->|Yes| A[Serverless Claude proxy]
+  A --> O
+  O --> S{Save snapshot?}
+  S -->|Google Sheets configured| G[Google Apps Script Web App]
+  S -->|Unavailable or not configured| L[localStorage backup]
+  G --> H[Saved Records view]
+  L --> H
+
+  classDef input fill:#132b3d,stroke:#3de0c0,color:#edf4ff;
+  classDef logic fill:#1b2140,stroke:#a78bfa,color:#edf4ff;
+  classDef output fill:#17332f,stroke:#6ea8ff,color:#edf4ff;
+  class U,F,V input;
+  class R,C,A logic;
+  class O,S,G,L,H output;

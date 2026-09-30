@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">loancheck shield mark</title>
+  <desc id="desc">A teal shield with a midnight check mark.</desc>
+  <rect width="256" height="256" fill="#081122"/>
+  <path d="M128 33 204 61v60c0 52-31 82-76 103-45-21-76-51-76-103V61l76-28Z" fill="#3de0c0"/>
+  <path d="m88 126 25 25 55-57" fill="none" stroke="#081122" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+  <path d="M128 47 187 69v51c0 40-22 64-59 83-37-19-59-43-59-83V69l59-22Z" fill="none" stroke="#a7f3e5" stroke-opacity=".55" stroke-width="5"/>
+</svg>

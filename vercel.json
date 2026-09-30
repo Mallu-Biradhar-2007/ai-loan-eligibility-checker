@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "api/claude.js": {
+      "runtime": "nodejs20.x",
+      "maxDuration": 20
+    }
+  },
+  "rewrites": [
+    { "source": "/api/claude", "destination": "/api/claude.js" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "private, no-store" }]
+    },
+    {
+      "source": "/(css|js)/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }]
+    }
+  ]
+}
